@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.7)
+cmake_minimum_required(VERSION 3.4)
 
 if(NOT JPEG_NAMESPACE)
   set(JPEG_NAMESPACE "JPEG")
@@ -13,7 +13,7 @@ endif()
 string(TOLOWER ${JPEG_NAMESPACE} JPEG_LIBRARY_NAME)
 
 
-project(${JPEG_NAMESPACE} C)
+project(${JPEG_NAMESPACE} VERSION ${GDCM_MAJOR_VERSION}.${GDCM_MINOR_VERSION}.${GDCM_BUILD_VERSION} LANGUAGES C)
 
 # Do full dependency headers.
 include_regular_expression("^.*$")

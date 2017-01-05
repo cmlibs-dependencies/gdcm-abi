@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.7)
+cmake_minimum_required(VERSION 3.4)
 
 if(NOT ZLIB_NAMESPACE)
   set(ZLIB_NAMESPACE "ZLIB")
@@ -7,7 +7,7 @@ endif()
 # In all cases:
 string(TOLOWER ${ZLIB_NAMESPACE} ZLIB_LIBRARY_NAME)
 
-project(${ZLIB_NAMESPACE} C)
+project(${ZLIB_NAMESPACE} VERSION 0.1.0 LANGUAGES C)
 
 # Do full dependency headers.
 include_regular_expression("^.*$")

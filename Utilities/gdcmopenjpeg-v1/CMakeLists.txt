@@ -7,7 +7,7 @@
 # For this purpose you can define a CMake var: OPENJPEG_NAMESPACE to whatever you like
 # e.g.:
 # set(OPENJPEG_NAMESPACE "GDCMOPENJPEG")
-cmake_minimum_required(VERSION 2.8.7)
+cmake_minimum_required(VERSION 3.4)
 if(POLICY CMP0022)
   cmake_policy(SET CMP0022 OLD)
 endif()
@@ -19,16 +19,16 @@ endif()
 # In all cases:
 string(TOLOWER ${OPENJPEG_NAMESPACE} OPENJPEG_LIBRARY_NAME)
 
-project(${OPENJPEG_NAMESPACE} C)
+set(OPENJPEG_VERSION_MAJOR 1)
+set(OPENJPEG_VERSION_MINOR 4)
+set(OPENJPEG_VERSION_BUILD 0)
+project(${OPENJPEG_NAMESPACE} VERSION ${OPENJPEG_VERSION_MAJOR}.${OPENJPEG_VERSION_MINOR}.${OPENJPEG_VERSION_BUILD} LANGUAGES C)
 
 # Do full dependency headers.
 include_regular_expression("^.*$")
 
 #-----------------------------------------------------------------------------
 # OPENJPEG version number, useful for packaging and doxygen doc:
-set(OPENJPEG_VERSION_MAJOR 1)
-set(OPENJPEG_VERSION_MINOR 4)
-set(OPENJPEG_VERSION_BUILD 0)
 set(OPENJPEG_VERSION
   "${OPENJPEG_VERSION_MAJOR}.${OPENJPEG_VERSION_MINOR}.${OPENJPEG_VERSION_BUILD}")
 set(PACKAGE_VERSION
