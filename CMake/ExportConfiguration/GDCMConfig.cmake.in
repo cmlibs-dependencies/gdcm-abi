@@ -34,9 +34,9 @@ if(GDCM_USE_VTK)
 endif()
 
 get_filename_component(SELF_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
-if(EXISTS ${SELF_DIR}/GDCMTargets.cmake)
+if(EXISTS ${SELF_DIR}/@GDCM_TARGETS_NAME@.cmake)
   # This is an install tree
-  include(${SELF_DIR}/GDCMTargets.cmake)
+  include(${SELF_DIR}/@GDCM_TARGETS_NAME@.cmake)
   get_filename_component(GDCM_INCLUDE_ROOT "${SELF_DIR}/../../@GDCM_INSTALL_INCLUDE_DIR@" ABSOLUTE)
   set(GDCM_INCLUDE_DIRS ${GDCM_INCLUDE_ROOT})
   get_filename_component(GDCM_LIB_ROOT "${SELF_DIR}/../../@GDCM_INSTALL_LIB_DIR@" ABSOLUTE)

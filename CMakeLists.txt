@@ -62,8 +62,11 @@ set(GDCM_STANDALONE 0)
 # install(EXPORT...)
 # This sets the default value for GDCM_STANDALONE
 if(NOT GDCM_TARGETS_NAME)
-  set(GDCM_TARGETS_NAME GDCMTargets)
+  set(GDCM_TARGETS_NAME gdcm-targets)
   set(GDCM_STANDALONE 1)
+endif()
+if(NOT GDCM_EXPORTS_NAME)
+  set(GDCM_EXPORTS_NAME gdcm-exports) 
 endif()
 #-----------------------------------------------------------------------------
 # PDB handling + Module handling
