@@ -1,5 +1,6 @@
 ### Build the configuration file for external projects using GDCM and cmake:
 set(GDCM_CONFIG_FILE ${GDCM_BINARY_DIR}/gdcm-abi-config.cmake)
+file(RELATIVE_PATH GDCM_CONFIG_INCLUDE_RELATIVE_PATH ${CMAKE_INSTALL_PREFIX}/${GDCM_INSTALL_PACKAGE_DIR} ${CMAKE_INSTALL_PREFIX})
 configure_file( GDCMConfig.cmake.in
 	${GDCM_CONFIG_FILE}
   @ONLY
