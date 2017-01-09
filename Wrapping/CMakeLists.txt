@@ -18,3 +18,6 @@ endif()
 if(GDCM_WRAP_CSHARP)
 #  subdirs(Csharp)
 endif()
+
+add_subdirectory(C)
+
