@@ -62,11 +62,9 @@ macro (install_pdb library)
       # The following does not work with LOCATION keyword. See:
       # http://www.cmake.org/pipermail/cmake/2011-February/042579.html
       foreach(cfg ${CMAKE_CONFIGURATION_TYPES})
-        get_target_property(library_dll ${library} LOCATION_${cfg})
-        string(REPLACE .dll .pdb library_pdb ${library_dll})
-        string(TOLOWER ${cfg} lcfg)
-        if(lcfg STREQUAL "debug" OR lcfg STREQUAL "relwithdebinfo")
-          install (FILES ${library_pdb}
+        get_target_property(library_pdb_file ${library} PDB_NAME_${cfg})
+        if(${library_pdb_file})
+          install (FILES ${library_pdb_file}
             DESTINATION ${GDCM_INSTALL_BIN_DIR}
             COMPONENT DebugDevel
             CONFIGURATIONS ${cfg}

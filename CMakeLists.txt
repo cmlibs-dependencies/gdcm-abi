@@ -415,6 +415,7 @@ if(GDCM_USE_SYSTEM_ZLIB)
   # If user say so, then this is a requirement !
   find_package(ZLIB REQUIRED)
   set(GDCM_ZLIB_LIBRARIES ${ZLIB_LIBRARIES})
+  set(GDCM_ZLIB_INCLUDE_DIRS ${ZLIB_INCLUDE_DIRS})
 else()
   set(GDCM_ZLIB_LIBRARIES "gdcmzlib")
 endif()

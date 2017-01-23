@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.7)
+cmake_minimum_required(VERSION 3.4)
 
 if(NOT GETOPT_NAMESPACE)
   set(GETOPT_NAMESPACE "GETOPT")
@@ -7,7 +7,7 @@ endif()
 # In all cases:
 string(TOLOWER ${GETOPT_NAMESPACE} GETOPT_LIBRARY_NAME)
 
-project(${GETOPT_NAMESPACE} C)
+project(${GETOPT_NAMESPACE} VERSION 1.0.0 LANGUAGES C)
 
 #set(BUILD_SHARED_LIBS OFF)
 
