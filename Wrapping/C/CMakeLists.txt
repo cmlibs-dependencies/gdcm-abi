@@ -15,7 +15,7 @@ include_directories(
 )
 
 add_library(gdcmCWRAPPER ${CWRAPPER_SRCS})
-target_link_libraries(gdcmCWRAPPER gdcmCommon)
+target_link_libraries(gdcmCWRAPPER gdcmDICT gdcmMSFF)
 
 set_target_properties(gdcmCWRAPPER PROPERTIES ${GDCM_LIBRARY_PROPERTIES})
 if(NOT GDCM_INSTALL_NO_LIBRARIES)
