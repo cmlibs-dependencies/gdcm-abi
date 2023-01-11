@@ -32,6 +32,7 @@ set(OPENJPEG_VERSION
 # This setting of SOVERSION assumes that any API change
 # will increment either the minor or major version number of openjpeg
 set(OPENJPEG_LIBRARY_PROPERTIES
+  DEBUG_POSTFIX d
   VERSION   "${OPENJPEG_VERSION_MAJOR}.${OPENJPEG_VERSION_MINOR}.${OPENJPEG_VERSION_BUILD}"
   SOVERSION "${OPENJPEG_VERSION_MAJOR}.${OPENJPEG_VERSION_MINOR}"
 )
