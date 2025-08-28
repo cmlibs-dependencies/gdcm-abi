@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.18)
 
 if(NOT GETOPT_NAMESPACE)
   set(GETOPT_NAMESPACE "GETOPT")

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.18)
 
 if(NOT EXPAT_NAMESPACE)
   set(EXPAT_NAMESPACE "EXPAT")
